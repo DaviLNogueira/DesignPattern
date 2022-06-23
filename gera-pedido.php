@@ -11,5 +11,6 @@ $numeroDeItens = $argv[2];
 $nomeCliente  = $argv[3];
 
 $gerarPedido = new GerarPedido($valorOrcamento,$numeroDeItens,$nomeCliente);
-$gerarPedido -> execute();
+$gerarPedidoHander = new \Alura\DesignPattern\GerarPedidoHandler();
+$gerarPedidoHander -> execute($gerarPedido);
 
