@@ -3,5 +3,9 @@
     "psr-4": {
       "Alura\\DesignPattern\\" : "src"
     }
+  },
+  "require": {
+    "ext-zip": "*",
+    "ext-simplexml": "*"
   }
 }
