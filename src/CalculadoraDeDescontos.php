@@ -18,7 +18,8 @@ class CalculadoraDeDescontos
             new DescontoMaisDe500reais(new SemDesconto()));
 
         $descontoCalculado = $cadeiaDeDescontos -> calculaDesconto($orcamento);
-        $logDesconto = new LogDesconto();
+        $logDesconto = new LogDesconto(); // não é recomendado criar passsar as informações dentro de outra classe
+        // o certo seria fazer que criasse dependencia e retornasse o que queria.
         $logDesconto -> informar($descontoCalculado);
         return $descontoCalculado;
     }
