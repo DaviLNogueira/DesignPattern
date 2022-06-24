@@ -1,12 +1,10 @@
 <?php
 
-namespace Alura\DesignPattern\Impostos;
+namespace Alura\DesignPattern;
 
-use Alura\DesignPattern\Descontos\Desconto;
 use Alura\DesignPattern\Descontos\DescontoMaisDe500reais;
 use Alura\DesignPattern\Descontos\DescontoMaisDe5itens;
 use Alura\DesignPattern\Descontos\SemDesconto;
-use Alura\DesignPattern\Orcamento;
 
 class CalculadoraDeDescontos
 {
@@ -19,6 +17,9 @@ class CalculadoraDeDescontos
         $cadeiaDeDescontos = new DescontoMaisDe5itens(
             new DescontoMaisDe500reais(new SemDesconto()));
 
-        return $cadeiaDeDescontos -> calculaDesconto($orcamento);
+        $descontoCalculado = $cadeiaDeDescontos -> calculaDesconto($orcamento);
+        $logDesconto = new LogDesconto();
+        $logDesconto -> informar($descontoCalculado);
+        return $descontoCalculado;
     }
 }

@@ -1,10 +1,6 @@
 <?php
 
-use Alura\DesignPattern\{CalculadoraDeImpostos,
-    Impostos\CalculadoraDeDescontos,
-    Impostos\Icms,
-    Impostos\Iss,
-    Orcamento};
+use Alura\DesignPattern\{CalculadoraDeImpostos, Impostos\Icms, Impostos\Iss, Orcamento};
 
 require 'vendor/autoload.php';
 
