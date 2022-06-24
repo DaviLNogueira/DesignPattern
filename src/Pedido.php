@@ -1,11 +1,11 @@
 <?php
 
 namespace Alura\DesignPattern;
+use Alura\DesignPattern\DadosExtrinscosPedidos;
 
 class Pedido
 {
-    public string  $nomeCliente;
-    public \DateTimeInterface  $dataFinalizacao;
+    public DadosExtrinscosPedidos $dados;
     public Orcamento  $orcamento;
 
 }
