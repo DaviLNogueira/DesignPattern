@@ -2,13 +2,7 @@
 
 require 'vendor/autoload.php';
 
-use Alura\DesignPattern\{Orcamento,
-    Pedido,
-    Relatorio\ArquivoXmlExportado,
-    Relatorio\PedidoExportado,
-    Relatorio\OrcamentoExportado,
-    Relatorio\ArquivoExportado,
-    Relatorio\ArquivoZipExportado};
+use Alura\DesignPattern\{Pedido\Pedido, Relatorio\ArquivoZipExportado, Relatorio\PedidoExportado};
 
 $pedido = new Pedido();
 $pedido -> nomeCliente = 'Vincius Dias';

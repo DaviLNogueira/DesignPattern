@@ -5,9 +5,7 @@ use Alura\DesignPattern\{AcoesAoGerarPedido\CriarPedidoNoBanco,
     AcoesAoGerarPedido\EnviarPedidoPorEmail,
     AcoesAoGerarPedido\LogGerarPedido,
     GerarPedido,
-    GerarPedidoHandler,
-    Orcamento,
-    Pedido};
+    GerarPedidoHandler};
 
 require_once 'vendor/autoload.php';
 

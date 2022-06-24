@@ -1,11 +1,11 @@
 <?php
 
-namespace Alura\DesignPattern;
-use Alura\DesignPattern\Template;
+namespace Alura\DesignPattern\Pedido;
+use Alura\DesignPattern\Orcamento;
 
 class Pedido
 {
-    public Template $template;
+    public TemplatePedido $template;
     public Orcamento  $orcamento;
 
 }

@@ -2,11 +2,7 @@
 
 namespace Alura\DesignPattern;
 
-use Alura\DesignPattern\AcoesAoGerarPedido\AcaoAposGerarPedido;
-use Alura\DesignPattern\AcoesAoGerarPedido\CriarPedidoNoBanco;
-use Alura\DesignPattern\AcoesAoGerarPedido\EnviarPedidoPorEmail;
-use Alura\DesignPattern\AcoesAoGerarPedido\LogGerarPedido;
-
+use Alura\DesignPattern\Pedido\Pedido;
 use ReturnTypeWillChange;
 use SplObserver;
 
