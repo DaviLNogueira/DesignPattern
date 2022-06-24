@@ -13,7 +13,7 @@ class Ikcv extends  ImpostoCom2Aliquotas
      */
     public function deveAplicarTaxaMaxima(Orcamento $orcamento): bool
     {
-        return $orcamento->valor > 300 && $orcamento->quantidadeItens > 3;
+        return $orcamento->valor() > 300 && $orcamento->quantidadeItens > 3;
     }
 
     /**
@@ -22,7 +22,7 @@ class Ikcv extends  ImpostoCom2Aliquotas
      */
     public function calculaTaxaMaxima(Orcamento $orcamento): float
     {
-        return $orcamento->valor * 0.04;
+        return $orcamento->valor() * 0.04;
     }
 
     /**
@@ -31,6 +31,6 @@ class Ikcv extends  ImpostoCom2Aliquotas
      */
     public function culculaTaxaMinima(Orcamento $orcamento): float
     {
-        return $orcamento->valor * 0.025;
+        return $orcamento->valor() * 0.025;
     }
 }
