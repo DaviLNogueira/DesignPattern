@@ -2,7 +2,7 @@
 
 namespace Alura\DesignPattern;
 
-class DadosExtrinscosPedidos
+class Template
 {
     public string  $nomeCliente;
     public \DateTimeInterface  $dataFinalizacao;
