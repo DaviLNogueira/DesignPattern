@@ -13,23 +13,6 @@ class NotaFiscal
     public \DateTimeInterface $dataEmissao;
     public float $valorImpostos;
 
-    /**
-     * @param string $cnpj
-     * @param string $razaoSocialEmpresa
-     * @param array $itens
-     * @param string $observacoes
-     * @param \DateTimeInterface $dataEmissao
-     * @param float $valorImpostos
-     */
-    public function __construct(string $cnpj, string $razaoSocialEmpresa, array $itens, string $observacoes, \DateTimeInterface $dataEmissao, float $valorImpostos)
-    {
-        $this->cnpj = $cnpj;
-        $this->razaoSocialEmpresa = $razaoSocialEmpresa;
-        $this->itens = $itens;
-        $this->observacoes = $observacoes;
-        $this->dataEmissao = $dataEmissao;
-        $this->valorImpostos = $valorImpostos;
-    }
 
     public function valor():float
     {
@@ -39,4 +22,22 @@ class NotaFiscal
         },0);
 
     }
+
+    public function clonar() : NotaFiscal
+    {
+        $cloneNotaFiscal = new NotaFiscal();
+        $cloneNotaFiscal -> cnpj = $this -> cnpj;
+        $cloneNotaFiscal -> razaoSocialEmpresa = $this -> razaoSocialEmpresa;
+        $cloneNotaFiscal -> itens = $this->itens;
+        $cloneNotaFiscal -> observacoes = $this->observacoes;
+        $cloneNotaFiscal -> dataEmissao = $this->dataEmissao;
+        $cloneNotaFiscal -> valorImpostos = $this->valorImpostos;
+        return  $cloneNotaFiscal;
+    }
+
+    public function __clone(): void
+    {
+        $this->dataEmissao = new \DateTimeImmutable();
+    }
+
 }
